@@ -31,7 +31,7 @@ te.sd=1.98 ####Calculated in arcmap for within site variation
 #te.sd=2.7
 
 
-basemap.cca <- read.csv("again_try_all.csv")
+basemap.cca <- read.csv("basemap.csv")
 names(basemap.cca) <- c("Longitude", "Latitude","sPCA") # rename columns
 
 data <- read.csv('te.pc1.csv', header = TRUE)
