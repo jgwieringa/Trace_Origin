@@ -5,27 +5,12 @@ library(raster)
 
 setwd("~/TE")
 
-labo_te=read.csv("labo-ICPMS-finalconc.csv")
-labo_loc=labo_te[,-4:-27]
-labo_loc=labo_loc[,-1]
+
+odds=2
 
 
-labo_te_pc=labo_te[,-1:-3]
-
-
-te.graph=chooseCN(labo_loc,type=5,d1=4,d2=20)
-
-te.spca1=spca(labo_te_pc,xy=labo_loc,cn=te.graph,scannf=FALSE)
-te.spca1
-
-labo_pc1=cbind(labo_loc,te.spca1$ls[1])
-labo_pc1
-
-odds=3
-
-data=cbind(labo_loc, te.spca1$ls[,1])
 ###Average of all sites
-te.sd=1.98 ####Calculated in arcmap for within site variation
+te.sd=9.696 ####Calculated in arcmap for within site variation
 ###Highest site
 #te.sd=3.89
 #te.sd=2.7
